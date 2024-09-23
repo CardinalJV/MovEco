@@ -16,7 +16,7 @@ struct MovIzzFocusView: View {
             HStack{
                 Image(user.img)
                     .resizable()
-                    .frame(width: 125, height: 125)
+                    .frame(width: 150, height: 150)
                 Spacer()
                 VStack(spacing: 5){
                     Text(user.depart)

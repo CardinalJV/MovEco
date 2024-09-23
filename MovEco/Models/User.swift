@@ -18,14 +18,6 @@ struct User: Identifiable {
     var description: String
 }
 
-//class UserActive: ObservableObject {
-//    @Published var name: String = ""
-//    @Published var img: String = ""
-//    @Published var mail: String = ""
-//    @Published var password: String = ""
-//    
-//}
-
 var users: [User] = [
     User(name: "Faiz", mail: "", password: "faiz", img: "faiz", depart: "Longages", arrival: "Toulouse", description: "Je m'appelle Faiz et je fais régulièrement la navette entre Longages et Toulouse. Ces trajets sont pour moi l'occasion parfaite de partager des moments agréables avec des compagnons de route. En dehors de mes voyages, je suis un grand fan de GTA RP, où j'aime incarner divers personnages et explorer des mondes virtuels passionnants. Toujours prêt pour une bonne conversation et de nouvelles rencontres, je suis impatient de vous accueillir à bord pour un trajet convivial et détendu."),
     User(name: "Ahmed", mail: "", password: "ahmed", img: "ahmed",depart: "Colomiers", arrival: "Toulouse", description: "Je m'appelle Ahmed et je fais régulièrement la navette entre Longages et Toulouse. Ces trajets sont pour moi l'occasion parfaite de partager des moments agréables avec des compagnons de route. En dehors de mes voyages, je suis un grand passionné de cinéma, toujours à la recherche des derniers films à découvrir et des classiques à revisiter. Toujours prêt pour une bonne conversation et de nouvelles rencontres, je suis impatient de vous accueillir à bord pour un trajet convivial et détendu."),
