@@ -11,7 +11,7 @@ import SwiftUI
 struct MovEcoApp: App {
     var body: some Scene {
         WindowGroup {
-            LaunchingTabView()
+            SplashScreenView()
         }
     }
 }
