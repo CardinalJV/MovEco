@@ -1,51 +1,36 @@
-//
-//  LaunchingTabView.swift
-//  MovEco
-//
-//  Created by Jessy Viranaiken on 07/05/2024.
-//
+  //
+  //  LaunchingTabView.swift
+  //  MovEco
+  //
+  //  Created by Jessy Viranaiken on 07/05/2024.
+  //
 
 import SwiftUI
 
-struct LaunchingView: View {
+struct SplashScreenView: View {
   
   @State private var isActive = false
   
-    var body: some View {
-      if isActive {
-        TabView(selection: .constant(1)) {
-          MovIzzView()
-            .tabItem {
-              Label("My MovIzz", systemImage: "person.fill.checkmark")
-            }
-          MapView()
-            .tabItem {
-              Label("MovMap", systemImage: "map.fill")
-            }
-            .tag(1)
-          NewUserProfilView()
-            .tabItem {
-              Label("MovAccount", systemImage: "person.circle.fill")
-            }
+  var body: some View {
+    TabView(selection: .constant(1)) {
+      MovIzzView()
+        .tabItem {
+          Label("My MovIzz", systemImage: "person.fill.checkmark")
         }
-        .tint(Color.green)
-      } else {
-        VStack{
-          Image(systemName: "LaunchingImage")
-            .resizable()
-            .frame(width: 100, height: 100)
+      MapView()
+        .tabItem {
+          Label("MovMap", systemImage: "map.fill")
         }
-        .onAppear {
-          DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
-            withAnimation {
-              self.isActive = true
-            }
-          }
+        .tag(1)
+      NewUserProfilView()
+        .tabItem {
+          Label("MovAccount", systemImage: "person.circle.fill")
         }
-      }
     }
+    .tint(Color.green)
+  }
 }
 
 #Preview {
-    LaunchingView()
+  SplashScreenView()
 }
