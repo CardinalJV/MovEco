@@ -76,4 +76,27 @@ class MapController {
     return MKCoordinateRegion(center: centerCoordinate, span: span)
   }
   
+  func generateRouteFromSource(to destination: MKMapItem) async -> MKPolyline? {
+    guard let userLocation = locationManager.location else { return nil }
+    
+    let source = MKMapItem(placemark: MKPlacemark(coordinate: userLocation.coordinate))
+    let directionRequest = MKDirections.Request()
+    directionRequest.source = source
+    directionRequest.destination = destination
+    directionRequest.transportType = .automobile
+    let directions = MKDirections(request: directionRequest)
+    do {
+      let response = try await directions.calculate()
+      if let route = response.routes.first {
+        return route.polyline
+      } else {
+        print("Aucune route trouvée.")
+        return nil
+      }
+    } catch {
+      print("Erreur lors de la génération de la route : \(error.localizedDescription)")
+      return nil
+    }
+  }
+  
 }
