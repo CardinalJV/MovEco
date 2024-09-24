@@ -38,7 +38,7 @@ struct MapView: View {
       }
     }
     .sheet(isPresented: self.$showDetails){
-      MapItemDetailsView(mapController: self.mapController, selectedMapItem: self.$selectedMapItem)
+      MapItemDetailsView(mapController: self.mapController, mapItem: self.$selectedMapItem)
         .presentationDetents([.fraction(0.5)])
     }
     .overlay(alignment: .bottom){
