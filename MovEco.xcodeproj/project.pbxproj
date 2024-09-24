@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		4326AD382BEE1E2B0062240C /* MovIzzFocusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4326AD372BEE1E2B0062240C /* MovIzzFocusView.swift */; };
-		43E3FCCF2BF0B0C000FABD5D /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43E3FCCE2BF0B0C000FABD5D /* Launch Screen.storyboard */; };
 		43FD30BF2BEA1D8E0015AC9A /* MovEcoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43FD30BE2BEA1D8E0015AC9A /* MovEcoApp.swift */; };
 		43FD30C12BEA1D8E0015AC9A /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43FD30C02BEA1D8E0015AC9A /* MapView.swift */; };
 		43FD30C32BEA1D8E0015AC9A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 43FD30C22BEA1D8E0015AC9A /* Assets.xcassets */; };
@@ -21,13 +20,12 @@
 		A71F69D72CA1CDCE00140FB0 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71F69D62CA1CDCE00140FB0 /* SearchBar.swift */; };
 		A71F69DA2CA1CE1800140FB0 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71F69D92CA1CE1800140FB0 /* View.swift */; };
 		A78C59BF2BECD89D00E0930E /* MovIzzView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A78C59BE2BECD89D00E0930E /* MovIzzView.swift */; };
-		A79EC9952BEA9D9D0068F997 /* LaunchingTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A79EC9942BEA9D9D0068F997 /* LaunchingTabView.swift */; };
+		A79EC9952BEA9D9D0068F997 /* SplashScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A79EC9942BEA9D9D0068F997 /* SplashScreenView.swift */; };
 		A7B15DEB2C78D30300C023ED /* MapController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7B15DEA2C78D30300C023ED /* MapController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		4326AD372BEE1E2B0062240C /* MovIzzFocusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovIzzFocusView.swift; sourceTree = "<group>"; };
-		43E3FCCE2BF0B0C000FABD5D /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		43FD30BB2BEA1D8E0015AC9A /* MovEco.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MovEco.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		43FD30BE2BEA1D8E0015AC9A /* MovEcoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovEcoApp.swift; sourceTree = "<group>"; };
 		43FD30C02BEA1D8E0015AC9A /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
@@ -41,7 +39,7 @@
 		A71F69D62CA1CDCE00140FB0 /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
 		A71F69D92CA1CE1800140FB0 /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
 		A78C59BE2BECD89D00E0930E /* MovIzzView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovIzzView.swift; sourceTree = "<group>"; };
-		A79EC9942BEA9D9D0068F997 /* LaunchingTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchingTabView.swift; sourceTree = "<group>"; };
+		A79EC9942BEA9D9D0068F997 /* SplashScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenView.swift; sourceTree = "<group>"; };
 		A7B15DEA2C78D30300C023ED /* MapController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -111,10 +109,9 @@
 				43FD30DE2BEA59030015AC9A /* UserProfilView.swift */,
 				43FD30D62BEA211B0015AC9A /* FormSignView.swift */,
 				43FD30DC2BEA4C140015AC9A /* FormLoginView.swift */,
-				A79EC9942BEA9D9D0068F997 /* LaunchingTabView.swift */,
+				A79EC9942BEA9D9D0068F997 /* SplashScreenView.swift */,
 				A78C59BE2BECD89D00E0930E /* MovIzzView.swift */,
 				4326AD372BEE1E2B0062240C /* MovIzzFocusView.swift */,
-				43E3FCCE2BF0B0C000FABD5D /* Launch Screen.storyboard */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -209,7 +206,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				43E3FCCF2BF0B0C000FABD5D /* Launch Screen.storyboard in Resources */,
 				43FD30C62BEA1D8E0015AC9A /* Preview Assets.xcassets in Resources */,
 				43FD30C32BEA1D8E0015AC9A /* Assets.xcassets in Resources */,
 			);
@@ -223,7 +219,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A71F69DA2CA1CE1800140FB0 /* View.swift in Sources */,
-				A79EC9952BEA9D9D0068F997 /* LaunchingTabView.swift in Sources */,
+				A79EC9952BEA9D9D0068F997 /* SplashScreenView.swift in Sources */,
 				A78C59BF2BECD89D00E0930E /* MovIzzView.swift in Sources */,
 				4326AD382BEE1E2B0062240C /* MovIzzFocusView.swift in Sources */,
 				43FD30D72BEA211B0015AC9A /* FormSignView.swift in Sources */,
@@ -365,6 +361,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"MovEco/Preview Content\"";
@@ -376,7 +373,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen.storyboard";
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchImage;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -397,6 +394,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"MovEco/Preview Content\"";
@@ -408,7 +406,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen.storyboard";
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchImage;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
