@@ -14,51 +14,71 @@ struct MapItemDetailsView: View {
   
   let mapController: MapController
   
-  @Binding var selectedMapItem: MKMapItem?
+  @Binding var mapItem: MKMapItem?
   @State private var lookAroundScene: MKLookAroundScene?
   
   var body: some View {
-    VStack(spacing: -20){
-      /* Header */
-      HStack{
-        VStack(alignment: .leading) {
-          Text(selectedMapItem?.placemark.name ?? "")
-            .font(.title2)
-            .fontWeight(.semibold)
-          
-          Text(selectedMapItem?.placemark.title ?? "")
-            .font(.footnote)
-            .foregroundStyle(Color.gray)
-            .lineLimit(2)
-            .padding(.trailing)
+    if let mapItem = self.mapItem {
+      VStack(spacing: 8){
+        /* Header */
+        HStack{
+          VStack(alignment: .leading) {
+            Text(mapItem.placemark.name ?? "")
+              .font(.title2)
+              .fontWeight(.semibold)
+            
+            Text(mapItem.placemark.title ?? "")
+              .font(.footnote)
+              .foregroundStyle(Color.gray)
+              .lineLimit(2)
+              .padding(.trailing)
+          }
+          Spacer()
+          Button(action: {
+            dismiss()
+            self.mapItem = nil
+          }, label: {
+            Image(systemName: "xmark.circle.fill")
+              .resizable()
+              .frame(width: 24, height: 24)
+              .foregroundStyle(.gray,Color(.systemGray6))
+          })
         }
+        /* - */
+        /* Composant lookAroundScene */
+        if self.lookAroundScene != nil {
+          LookAroundPreview(initialScene: self.lookAroundScene)
+            .frame(height: 200)
+            .clipShape(.rect(cornerRadius: 5))
+//            .padding()
+        } else {
+          ContentUnavailableView("No preview available", systemImage: "eye.slash")
+        }
+        Button {
+          Task {
+            await self.mapController.generateRouteFromSource(to: mapItem)
+          }
+        } label: {
+          HStack{
+            Text("GO")
+            Image(systemName: "hand.thumbsup.fill")
+          }
+        }
+        .frame(width: 375, height: 50)
+        .background(.green)
+        .clipShape(.rect(cornerRadius: 5))
+        .font(.title)
+        .foregroundStyle(.white)
+        .bold()
+        /* - */
         Spacer()
-        Button(action: {
-          dismiss()
-          self.selectedMapItem = nil
-        }, label: {
-          Image(systemName: "xmark.circle.fill")
-            .resizable()
-            .frame(width: 24, height: 24)
-            .foregroundStyle(.gray,Color(.systemGray6))
-        })
       }
       .padding()
-      /* - */
-      /* Composant lookAroundScene */
-      if self.lookAroundScene != nil {
-        LookAroundPreview(initialScene: self.lookAroundScene)
-          .frame(height: 200)
-          .cornerRadius(12)
-          .padding()
-      } else {
-        ContentUnavailableView("No preview available", systemImage: "eye.slash")
+      .task {
+        self.lookAroundScene = await mapController.fetchLookAroundPreview(for: self.mapItem)
       }
-      /* - */
-      Spacer()
-    }
-    .task {
-      self.lookAroundScene = await mapController.fetchLookAroundPreview(for: self.selectedMapItem)
+    } else {
+      Text("Impossible de récupérer les informations.")
     }
   }
 }
