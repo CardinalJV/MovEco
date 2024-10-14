@@ -38,6 +38,7 @@
 		43FD30DE2BEA59030015AC9A /* UserProfilView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfilView.swift; sourceTree = "<group>"; };
 		A71F69D62CA1CDCE00140FB0 /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
 		A71F69D92CA1CE1800140FB0 /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
+		A7668ED82CBD89C200F62551 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		A78C59BE2BECD89D00E0930E /* MovIzzView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovIzzView.swift; sourceTree = "<group>"; };
 		A79EC9942BEA9D9D0068F997 /* SplashScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenView.swift; sourceTree = "<group>"; };
 		A7B15DEA2C78D30300C023ED /* MapController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapController.swift; sourceTree = "<group>"; };
@@ -57,6 +58,7 @@
 		43FD30B22BEA1D8E0015AC9A = {
 			isa = PBXGroup;
 			children = (
+				A7668ED82CBD89C200F62551 /* .gitignore */,
 				43FD30BD2BEA1D8E0015AC9A /* MovEco */,
 				43FD30BC2BEA1D8E0015AC9A /* Products */,
 			);
