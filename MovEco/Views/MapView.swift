@@ -17,6 +17,8 @@ struct MapView: View {
   @State var selectedMapItem: MKMapItem?
   @State var showDetails = false
   @State var searchText = ""
+  @State var showRoute = false
+  @State var route: MKPolyline? = nil
   
   var body: some View {
     Map(position: self.$cameraPosition, selection: self.$selectedMapItem){
@@ -24,21 +26,46 @@ struct MapView: View {
         Marker("My location", systemImage: "person.fill", coordinate: userCoordinate)
       }
       ForEach(mapController.mapItems, id:\.self){ mapItem in
-        Marker(mapItem.name ?? "Inconnu", coordinate: mapItem.placemark.coordinate)
-          .tint(.green)
+        if self.showRoute {
+          if let mapItem = self.selectedMapItem {
+            Marker(mapItem.name ?? "Inconnu", coordinate: mapItem.placemark.coordinate)
+          }
+        } else {
+          Marker(mapItem.name ?? "Inconnu", coordinate: mapItem.placemark.coordinate)
+            .tint(.green)
+        }
+      }
+      if self.showRoute {
+        if let route = self.route {
+          withAnimation(.snappy){
+            MapPolyline(route)
+              .stroke(.green, lineWidth: 5)
+          }
+        }
       }
     }
     .tint(.green)
     .onAppear{
       CLLocationManager().requestWhenInUseAuthorization()
     }
+    .onChange(of: self.mapController.mapItems){
+      self.showRoute = false
+    }
     .onChange(of: self.selectedMapItem) {
       if self.selectedMapItem != nil {
-        self.showDetails = true
+        self.showDetails.toggle()
+      }
+    }
+    .onChange(of: self.showRoute) {
+      Task {
+        self.route = await self.mapController.generateRouteFromSource(to: self.selectedMapItem!)!
+        if let route = self.route {
+          self.cameraPosition = .rect(route.boundingMapRect)
+        }
       }
     }
     .sheet(isPresented: self.$showDetails){
-      MapItemDetailsView(mapController: self.mapController, mapItem: self.$selectedMapItem)
+      MapItemDetailsView(mapController: self.mapController, showRoute: self.$showRoute , mapItem: self.$selectedMapItem)
         .presentationDetents([.fraction(0.5)])
     }
     .overlay(alignment: .bottom){

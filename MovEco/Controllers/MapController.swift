@@ -14,7 +14,6 @@ class MapController {
   var mapItems = [MKMapItem]()
     // Récupère la localisation de l'utilisateur si ce dernier accepte
   var locationManager = CLLocationManager()
-    // Récupère un apercu du lieu sélectionner
   
   func searchPlaces(query: String) async {
       // Vérifie que l'utilisateur soit géolocalisable sinon return nil

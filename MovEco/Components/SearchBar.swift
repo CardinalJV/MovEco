@@ -44,14 +44,14 @@ struct SearchBar: View {
             .bold()
             .foregroundStyle(Color.white)
             .background(Color.green)
-            .clipShape(.rect(cornerRadius: 5))
+            .clipShape(.rect(cornerRadius: 6))
         })
         
       }
       .frame(height: 45, alignment: .leading)
       .padding(.init(top: .zero, leading: 15, bottom: .zero, trailing: 5))
       .background(.white)
-      .clipShape(.rect(cornerRadius: 10))
+      .clipShape(.rect(cornerRadius: 8))
       .shadow(radius: 10)
     }
     .onSubmit {

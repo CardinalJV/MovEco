@@ -7,14 +7,13 @@
 
 import SwiftUI
 
-struct NewUserProfilView: View {
+struct UserProfilView: View {
     @State var userBio = ""
     var userPassword = "1234"
     let background = Color(red: 242/255, green: 247/255, blue: 242/255)
 
     var body: some View {
         ZStack{
-            let background = Color(red: 242/255, green: 247/255, blue: 242/255)
             background
                 .ignoresSafeArea()
             VStack(spacing: 2){
@@ -23,10 +22,10 @@ struct NewUserProfilView: View {
                     .frame(width: 150, height: 150)
                     .shadow(radius: 10)
                 VStack(alignment: .leading,spacing: 0){
-                    SelfItemView(title: "Nom", content: "Viranaiken")
-                    SelfItemView(title: "Prénom", content: "Jessy")
-                    SelfItemView(title: "Mail", content: "jessy.viranaiken@icloud.com")
-                    SelfItemView(title: "Mot de passe", content: "****")
+                    UserItem(title: "Nom", content: "Viranaiken")
+                    UserItem(title: "Prénom", content: "Jessy")
+                    UserItem(title: "Mail", content: "jessy.viranaiken@icloud.com")
+                    UserItem(title: "Mot de passe", content: "****")
                     VStack(spacing: 5){
                         HStack {
                             Text("Trajets réguliers")
@@ -47,10 +46,6 @@ struct NewUserProfilView: View {
                     .padding(5)
                 }
                 .padding()
-//                ZStack{
-//                    CustomTextEditor("Enter your note", text: $userBio)
-//                        .padding()
-//                }
                 VStack(alignment: .leading) {
                     Text("A propos de moi")
                         .font(.title2)
@@ -80,7 +75,7 @@ struct NewUserProfilView: View {
     }
 }
 
-struct SelfItemView: View {
+struct UserItem: View {
 
   var title: String
   var content: String
@@ -106,5 +101,5 @@ struct SelfItemView: View {
 }
 
 #Preview {
-  NewUserProfilView()
+  UserProfilView()
 }

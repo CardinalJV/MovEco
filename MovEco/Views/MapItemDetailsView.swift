@@ -14,6 +14,7 @@ struct MapItemDetailsView: View {
   
   let mapController: MapController
   
+  @Binding var showRoute: Bool
   @Binding var mapItem: MKMapItem?
   @State private var lookAroundScene: MKLookAroundScene?
   
@@ -36,7 +37,6 @@ struct MapItemDetailsView: View {
           Spacer()
           Button(action: {
             dismiss()
-            self.mapItem = nil
           }, label: {
             Image(systemName: "xmark.circle.fill")
               .resizable()
@@ -49,15 +49,13 @@ struct MapItemDetailsView: View {
         if self.lookAroundScene != nil {
           LookAroundPreview(initialScene: self.lookAroundScene)
             .frame(height: 200)
-            .clipShape(.rect(cornerRadius: 5))
-//            .padding()
+            .clipShape(.rect(cornerRadius: 8))
         } else {
           ContentUnavailableView("No preview available", systemImage: "eye.slash")
         }
         Button {
-          Task {
-            await self.mapController.generateRouteFromSource(to: mapItem)
-          }
+          self.showRoute = true
+          dismiss()
         } label: {
           HStack{
             Text("GO")
@@ -66,7 +64,7 @@ struct MapItemDetailsView: View {
         }
         .frame(width: 375, height: 50)
         .background(.green)
-        .clipShape(.rect(cornerRadius: 5))
+        .clipShape(.rect(cornerRadius: 8))
         .font(.title)
         .foregroundStyle(.white)
         .bold()

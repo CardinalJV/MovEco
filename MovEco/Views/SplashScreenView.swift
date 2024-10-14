@@ -1,5 +1,5 @@
   //
-  //  LaunchingTabView.swift
+  //  SplashScreenView.swift
   //  MovEco
   //
   //  Created by Jessy Viranaiken on 07/05/2024.
@@ -22,7 +22,7 @@ struct SplashScreenView: View {
           Label("MovMap", systemImage: "map.fill")
         }
         .tag(1)
-      NewUserProfilView()
+      UserProfilView()
         .tabItem {
           Label("MovAccount", systemImage: "person.circle.fill")
         }
