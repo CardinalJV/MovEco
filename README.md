@@ -55,6 +55,10 @@ Le MapController.swift centralise la logique de gestion de la carte, notamment l
 
 Clonez le projet depuis le dépôt GitHub, puis ouvrez-le dans Xcode. Assurez-vous que vous utilisez la dernière version de Xcode compatible avec Swift 5 et SwiftUI pour éviter tout problème de compatibilité.
 
+## ScreenCast
+
+https://github.com/user-attachments/assets/1bb19ff8-8528-4137-a4a3-c059780c526c
+
 ## Crédits
 
 Dédicace à Faiz, Allan, Diego ainsi qu'Ahmed, la team de choc, sans qui ce projet n'aurait jamais vu le jour.
