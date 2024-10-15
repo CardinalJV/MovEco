@@ -48,7 +48,7 @@ Le MapController.swift centralise la logique de gestion de la carte, notamment l
 - Langage : Swift
 - Frameworks : SwiftUI, MapKit
 - Gestion des états : Utilisation de @State et @Observable pour la gestion des vues et des modèles.
-- Version iOS supportée : iOS 14 et plus
+- Version iOS supportée : iOS 17 et plus (Depuis iOS 18, un overlay rouge apparait sur la map donc pour éviter tous problème d'affichage rester sur une version 17 et plus d'iOS)
 - Gestion asynchrone : Utilisation de async/await pour gérer les appels réseau et les calculs d'itinéraires.
 
 ## Installation
