@@ -8,6 +8,7 @@
 import SwiftUI
 import MapKit
 import CoreLocation
+//import Foundation
 
 struct MapView: View {
   
@@ -44,7 +45,6 @@ struct MapView: View {
         }
       }
     }
-    .tint(.green)
     .onAppear{
       CLLocationManager().requestWhenInUseAuthorization()
     }
@@ -60,16 +60,16 @@ struct MapView: View {
       Task {
         self.route = await self.mapController.generateRouteFromSource(to: self.selectedMapItem!)!
         if let route = self.route {
-          self.cameraPosition = .rect(route.boundingMapRect)
+          self.cameraPosition = .rect(route.boundingMapRect.insetBy(dx: -route.boundingMapRect.size.width * 0.25, dy: -route.boundingMapRect.size.height * 0.25))
         }
       }
     }
-    .sheet(isPresented: self.$showDetails){
-      MapItemDetailsView(mapController: self.mapController, showRoute: self.$showRoute , mapItem: self.$selectedMapItem)
-        .presentationDetents([.fraction(0.5)])
-    }
     .overlay(alignment: .bottom){
       SearchBar(mapController: self.mapController, searchText: self.$searchText, cameraPosition: self.$cameraPosition)
+    }
+    .sheet(isPresented: self.$showDetails){
+      MapItemDetailsView(mapController: self.mapController, showRoute: self.$showRoute, mapItem: self.$selectedMapItem)
+        .presentationDetents([.fraction(0.5)])
     }
     .mapControls{
       MapCompass()
