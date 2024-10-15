@@ -14,7 +14,7 @@ MovEco est une application iOS native qui permet de visualiser des emplacements 
 
 https://github.com/user-attachments/assets/e9784295-bd33-4d07-a2db-45368f5e0c87
 
-### Fonctionnalités principales 
+## Fonctionnalités principales 
 
 - Carte interactive avec MapKit :
 
