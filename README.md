@@ -10,7 +10,11 @@
 
 MovEco est une application iOS native qui permet de visualiser des emplacements sur une carte interactive. L'application utilise les fonctionnalités du SDK MapKit pour gérer l'affichage de la carte, les annotations personnalisées, ainsi que la génération de routes entre les différents points d'intérêt. Elle inclut également une gestion d'utilisateur avec des écrans de connexion, d'inscription et de profil.
 
-## Fonctionnalités principales 
+## ScreenCast
+
+https://github.com/user-attachments/assets/e9784295-bd33-4d07-a2db-45368f5e0c87
+
+### Fonctionnalités principales 
 
 - Carte interactive avec MapKit :
 
@@ -54,10 +58,6 @@ Le MapController.swift centralise la logique de gestion de la carte, notamment l
 ## Installation
 
 Clonez le projet depuis le dépôt GitHub, puis ouvrez-le dans Xcode. Assurez-vous que vous utilisez la dernière version de Xcode compatible avec Swift 5 et SwiftUI pour éviter tout problème de compatibilité.
-
-## ScreenCast
-
-https://github.com/user-attachments/assets/e9784295-bd33-4d07-a2db-45368f5e0c87
 
 ## Crédits
 
