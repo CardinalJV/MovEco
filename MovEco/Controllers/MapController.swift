@@ -1,5 +1,5 @@
   //
-  //  MapViewModel.swift
+  //  MapController.swift
   //  MovEco
   //
   //  Created by Jessy Viranaiken on 23/08/2024.
