@@ -57,7 +57,7 @@ Clonez le projet depuis le dépôt GitHub, puis ouvrez-le dans Xcode. Assurez-vo
 
 ## ScreenCast
 
-https://github.com/user-attachments/assets/1bb19ff8-8528-4137-a4a3-c059780c526c
+https://github.com/user-attachments/assets/e9784295-bd33-4d07-a2db-45368f5e0c87
 
 ## Crédits
 
