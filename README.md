@@ -3,8 +3,6 @@
 <a href="https://developer.apple.com/documentation/mapkit/">
   <img src="https://raw.githubusercontent.com/CardinalJV/CardinalJV/main/assets/logo-swift/mapkit-64x64_2x.png" alt="MapKit" title="MapKit" width="75" height="75"/></a>
 
-----
-
 # MovEco
 
 MovEco est une application iOS native qui permet de visualiser des emplacements sur une carte interactive. L'application utilise les fonctionnalités du SDK MapKit pour gérer l'affichage de la carte, les annotations personnalisées, ainsi que la génération de routes entre les différents points d'intérêt. Elle inclut également une gestion d'utilisateur avec des écrans de connexion, d'inscription et de profil.
